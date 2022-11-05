@@ -1,0 +1,56 @@
+<header>
+  <nav class="navbar">
+    <button
+      (click)="toggleSideBar()"
+      class="navbar-mobile-menu"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+    </button>
+
+    <div class="navbar-title">
+      <h1>Rickfy</h1>
+    </div>
+
+    <div class="navbar-desktop">
+      <ul>
+        <li>
+          <a href="">Characters</a>
+        </li>
+        <li>
+          <a href="">Locations</a>
+        </li>
+        <li>
+          <a href="">Episodes</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav
+    class="navbar-mobile"
+    [class.navbar-mobile--active]="sideBarActive"
+  >
+    <button
+      class="navbar-mobile-close"
+      (click)="toggleSideBar()"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <ul>
+      <li>
+        <a href="">Characters</a>
+      </li>
+      <li>
+        <a href="">Locations</a>
+      </li>
+      <li>
+        <a href="">Episodes</a>
+      </li>
+    </ul>
+  </nav>
+</header>
